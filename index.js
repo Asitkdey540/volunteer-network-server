@@ -39,7 +39,7 @@ client.connect(err => {
 
 
 
-    // app.get('/opportuniti/:key', (req, res) => {
+    // app.get('/activity/:key', (req, res) => {
     //     collection.find({ _id: ObjectId(req.params.key) })
     //         .toArray((err, documents) => {
     //             console.log(documents)
