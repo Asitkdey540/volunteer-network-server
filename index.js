@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 const ObjectId = require('mongodb').ObjectId;
 const MongoClient = require('mongodb').MongoClient;
+const PORT = process.env.PORT || 3003;
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.r6p6q.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
@@ -88,4 +89,4 @@ client.connect(err => {
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
-app.listen(process.env.PORT || 3003)
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
