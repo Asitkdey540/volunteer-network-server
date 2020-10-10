@@ -37,13 +37,13 @@ client.connect(err => {
 
 
 
-    app.get('/opportuniti/:key', (req, res) => {
-        collection.find({ _id: ObjectId(req.params.key) })
-            .toArray((err, documents) => {
-                console.log(documents)
-                res.send(documents[0])
-            })
-    })
+    // app.get('/opportuniti/:key', (req, res) => {
+    //     collection.find({ _id: ObjectId(req.params.key) })
+    //         .toArray((err, documents) => {
+    //             console.log(documents)
+    //             res.send(documents[0])
+    //         })
+    // })
 
     app.delete('/cancleActivity/:id', (req, res) => {
         volunteercollection.deleteOne({ _id: ObjectId(req.params.id) })
