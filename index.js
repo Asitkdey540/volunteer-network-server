@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 client.connect(err => {
-    const collection = client.db("volunteer-network-two").collection("all-data");
-    const volunteercollection = client.db("volunteer-network-two").collection("regiter-data");
+    const collection = client.db(process.env.DB_NAME).collection("all-data");
+    const volunteercollection = client.db(process.env.DB_NAME).collection("regiter-data");
 
 
 
